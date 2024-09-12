@@ -7,6 +7,9 @@ import model.ContatoVO;
 import model.dao.ContatoDAOImpl;
 import model.dao.IContatoDAO;
 import model.factory.ConexaoFactory;
+import model.repository.ContatoMySQLRepository;
+import model.repository.IContatoRepository;
+import model.service.ContatoService;
 
 public class Main {
 
@@ -14,14 +17,16 @@ public class Main {
 
         Connection conexao = ConexaoFactory.getConexao();
         IContatoDAO dao = new ContatoDAOImpl(conexao);
+        IContatoRepository repository = new ContatoMySQLRepository(dao);
+        ContatoService service = new ContatoService(repository);
 
         var c1 = new ContatoVO()
-                .setNome("Erika G S Silva")
-                .setEmail("erika@me.com")
-                .setTelefone("19 98888-0007");
+                .setNome("Alvin G S Silva")
+                // .setEmail("erika@me.com")
+                .setTelefone("19 98888-0002");
 
-        // dao.salvar(c1);
-        List<ContatoVO> contatos = dao.buscarTodos();
+        service.criar(c1);
+        List<ContatoVO> contatos = service.buscarTodos();
         contatos.forEach(c -> System.out.println(c));
 
     }
