@@ -19,9 +19,9 @@ public class Main {
         IContatoDAO dao = new ContatoDAOImpl(conexao);
         IContatoRepository repository = new ContatoMySQLRepository(dao);
 
-        // TODO: Criar instancia do repositorio em memoria
+        //TODO: Criar instancia do repositorio em memoria
 
-        // TODO: Substituir o repositorio em banco de bados pelo repositorio em memoria
+        //TODO: Substituir o repositorio em banco de bados pelo repositorio em memoria
         ContatoService service = new ContatoService(repository);
 
         //TODO: Inclua os dados nos objetos que facilitem a identificacao dos mesmo nos //TODOS abaixo
@@ -48,9 +48,9 @@ public class Main {
 
         //TODO: Buscar o terceiro contato  por e-mail e exibir todos os contatos
 
-        //TODO: Removr o segundo contato e exibir todos
+        //TODO: Remover o segundo contato e exibir todos
 
-        //TODO: COmplete os os A-FAZER do ContatoDAOImpl 
+        //TODO: COmplete os os A-FAZERES do ContatoDAOImpl
         
         //TODO: Substitua o repositorio em memoria pelo repositorio em banco de dados
 

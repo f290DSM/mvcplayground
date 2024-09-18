@@ -30,5 +30,15 @@ public class ContatoService {
     public List<ContatoVO> buscarTodos() {
         return repository.buscarTodos();
     }
+
+    public void atualizar(ContatoVO contatoVO) {
+        //TODO: Buscar contato existente por e-mail e lancar exceção caso o o contato não exista
+
+        //TODO: Efetivar a alteração de dados e persistir em banco de dados
+    }
+
+    public void remover(Integer id) {
+        //TODO: Remover contato
+    }
     
 }
