@@ -13,6 +13,8 @@ public class ContatoEmMemoriaRespository implements IContatoRepository {
     @Override
     public void salvar(ContatoVO contato) throws SQLException {
         contatos.add(contato);
+        int index = contatos.indexOf(contato);
+        contato.setId(index);
     }
 
     @Override
