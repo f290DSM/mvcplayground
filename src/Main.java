@@ -24,6 +24,7 @@ public class Main {
         // TODO: Substituir o repositorio em banco de bados pelo repositorio em memoria
         ContatoService service = new ContatoService(repository);
 
+        //TODO: Inclua os dados nos objetos que facilitem a identificacao dos mesmo nos //TODOS abaixo
         var c1 = new ContatoVO()
                 .setNome("?")
                 .setEmail("?")
