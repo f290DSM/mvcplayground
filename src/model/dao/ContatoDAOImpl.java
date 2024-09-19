@@ -72,4 +72,11 @@ public class ContatoDAOImpl implements IContatoDAO {
         return null;
     }
 
+    @Override
+    public void atualizarTabelas() {
+        //TODO: Criar banco create database if not exists fatec...
+
+        //TODO: Criar tabela: create table if not exists...
+    }
+
 }

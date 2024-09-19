@@ -15,4 +15,6 @@ public interface IContatoDAO {
     List<ContatoVO> buscarTodos();
 
     ContatoVO buscarPorEmail(String email);
+
+    void atualizarTabelas();
 }

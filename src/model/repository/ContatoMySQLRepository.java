@@ -38,5 +38,9 @@ public class ContatoMySQLRepository implements IContatoRepository {
     public ContatoVO buscarPorEmail(String email) {
         return dao.buscarPorEmail(email);
     }
+
+    public void atualizarTabelas() {
+        dao.atualizarTabelas();
+    }
     
 }
